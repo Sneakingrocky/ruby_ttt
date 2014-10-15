@@ -6,14 +6,22 @@ class Board
     @width = width
     @spaces = []
   end
+
+  def make_square_board
+    @width ** 2
+  end  
   
   def set_space(space, token)
     if space_taken?(space)
-      raise ArgumentError.new("Space is taken")
+      space_taken_error
     else
       @spaces[space] = token
     end
   end
+
+  def space_taken_error
+    raise ArgumentError.new("Space is taken")
+  end  
 
   def get_space(space)
     @spaces[space]

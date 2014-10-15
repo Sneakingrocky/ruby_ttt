@@ -9,7 +9,14 @@ describe Board do
 
       expect(board.width).to eq(3)
     end
-  end 
+  end
+
+  describe "make_square_board" do
+    it "makes a square board when given a width" do
+
+      expect(board.make_square_board).to eq(9)
+    end
+  end    
 
   describe "setting and getting spaces" do
     it "sets a space" do
@@ -32,6 +39,7 @@ describe Board do
       board.set_space(1, "x")
       expect { board.set_space(1, "o") }.to raise_error(ArgumentError, "Space is taken")
     end
+
   end
 
   describe "space_taken?" do
