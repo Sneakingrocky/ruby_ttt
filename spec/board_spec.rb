@@ -2,20 +2,13 @@ require 'spec_helper'
 require 'board'
 
 describe Board do
-  let(:board) { Board.new(3,3) }
+  let(:board) { Board.new(3) }
 
   describe "initialize" do
     it "sets the width of the board" do
-      board = Board.new(3, 6)
 
       expect(board.width).to eq(3)
     end
-    
-    it "sets the height of the board" do
-      board = Board.new(3, 6)
-
-      expect(board.height).to eq(6)
-    end  
   end 
 
   describe "setting and getting spaces" do

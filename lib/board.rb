@@ -1,10 +1,9 @@
 class Board
 
-  attr_reader :width, :height
+  attr_reader :width
 
-  def initialize(width, height)
+  def initialize(width)
     @width = width
-    @height = height
     @spaces = []
   end
   
