@@ -11,10 +11,10 @@ describe Board do
     end
   end
 
-  describe "make_square_board" do
-    it "makes a square board when given a width" do
+  describe "number_of_spaces" do
+    it "returns the number of spaces" do
 
-      expect(board.make_square_board).to eq(9)
+      expect(board.number_of_spaces).to eq(9)
     end
   end    
 
@@ -40,6 +40,10 @@ describe Board do
       expect { board.set_space(1, "o") }.to raise_error(ArgumentError, "Space is taken")
     end
 
+    it "raises an error for an invalid space" do
+      expect { board.set_space(10, "x") }.to raise_error(ArgumentError, "Invalid space")
+    end
+   
   end
 
   describe "space_taken?" do
