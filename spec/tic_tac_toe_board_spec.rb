@@ -68,5 +68,53 @@ describe TicTacToeBoard do
         expect(ttt_board2.columns).to eq(expected_output_columns)
       end
     end
+
+    describe "left_diagonal" do
+      it "returns the spaces in the left diagonal" do
+        ttt_board1.set_space(0, "a")
+        ttt_board1.set_space(4, 2)
+        ttt_board1.set_space(8, 3)
+
+        expected_output = ["a", 2, 3]
+
+        expect(ttt_board1.left_diagonal).to eq(expected_output)
+      end
+      
+      it "returns the spaces in the left diagonal" do
+        ttt_board2.set_space(0, "a")
+        ttt_board2.set_space(5, 2)
+        ttt_board2.set_space(10, 3)
+        ttt_board2.set_space(15, 4)
+
+
+        expected_output = ["a", 2, 3, 4]
+
+        expect(ttt_board2.left_diagonal).to eq(expected_output)
+      end
+    end
+
+    describe "right_diagonal" do
+      it "returns the spaces in the right diagonal" do
+        ttt_board1.set_space(2, "a")
+        ttt_board1.set_space(4, 2)
+        ttt_board1.set_space(6, 3)
+
+        expected_output = ["a", 2, 3]
+
+        expect(ttt_board1.right_diagonal).to eq(expected_output)
+      end
+      
+      it "returns the spaces in the right diagonal" do
+        ttt_board2.set_space(3, "a")
+        ttt_board2.set_space(6, 2)
+        ttt_board2.set_space(9, 3)
+        ttt_board2.set_space(12, 4)
+
+
+        expected_output = ["a", 2, 3, 4]
+
+        expect(ttt_board2.right_diagonal).to eq(expected_output)
+      end
+    end
   end    
 end
