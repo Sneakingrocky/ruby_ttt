@@ -26,6 +26,15 @@ class TicTacToeBoard < Board
     rows + columns + combined_diagonals
   end  
 
+  def spaces_occupied_by_one_player?(combo)
+    combo.each do |value|
+      if value != combo.first || value == nil
+        return false  
+      end    
+    end
+    return true  
+  end 
+
   def game_has_winner?
     pontential_winning_combos.each do |combo|
       if spaces_occupied_by_one_player?(combo)
@@ -35,12 +44,11 @@ class TicTacToeBoard < Board
     return false
   end
 
-  def spaces_occupied_by_one_player?(combo)
-    combo.each do |value|
-      if value != combo.first || value == nil
-        return false  
-      end    
-    end
-    return true  
-  end  
+  def game_is_a_draw?
+    !game_has_winner? && @spaces.all? { |space| space != nil } 
+  end
+
+  def game_is_over?
+    game_has_winner? || game_is_a_draw?
+  end   
 end

@@ -166,6 +166,22 @@ describe TicTacToeBoard do
 
         expect(board_3x3.game_has_winner?).to eq(false)
       end  
-    end    
+    end
+
+    describe "game_is_a_draw?" do
+      it "returns true when there is no winner and all spaces are filled on the board" do
+        board_3x3.set_space(0, "x")
+        board_3x3.set_space(1, "x")
+        board_3x3.set_space(2, "o")
+        board_3x3.set_space(3, "o")
+        board_3x3.set_space(4, "o")
+        board_3x3.set_space(5, "x")
+        board_3x3.set_space(6, "x")
+        board_3x3.set_space(7, "o")
+        board_3x3.set_space(8, "x")
+
+        expect(board_3x3.game_is_a_draw?).to eq(true)
+      end
+    end
   end
 end  
