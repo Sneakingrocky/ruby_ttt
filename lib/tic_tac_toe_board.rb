@@ -35,20 +35,20 @@ class TicTacToeBoard < Board
     return true  
   end 
 
-  def game_has_winner?
+  def winner
     pontential_winning_combos.each do |combo|
       if spaces_occupied_by_one_player?(combo)
-        return true
+        return combo[0]
       end  
     end
-    return false
+    return nil
   end
 
   def game_is_a_draw?
-    !game_has_winner? && @spaces.all? { |space| space != nil } 
+    !winner && @spaces.all? { |space| space != nil } 
   end
 
   def game_is_over?
-    game_has_winner? || game_is_a_draw?
+    winner || game_is_a_draw?
   end   
 end

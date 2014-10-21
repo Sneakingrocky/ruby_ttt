@@ -117,14 +117,14 @@ describe TicTacToeBoard do
       end
     end
   
-   describe "game_has_winner?" do
+   describe "winner" do
 
       it "returns true when there are 3 identical tokens in a row" do
         board_3x3.set_space(0, "x")
         board_3x3.set_space(1, "x")
         board_3x3.set_space(2, "x")
 
-        expect(board_3x3.game_has_winner?).to eq(true)
+        expect(board_3x3.winner).to eq("x")
       end
 
       it "returns false when there are not 3 identical tokens in a row" do
@@ -132,7 +132,7 @@ describe TicTacToeBoard do
         board_3x3.set_space(1, "x")
         board_3x3.set_space(2, "o")
 
-        expect(board_3x3.game_has_winner?).to eq(false)
+        expect(board_3x3.winner).to eq(nil)
       end
 
       it "returns true when there are 3 identical tokens in a column" do
@@ -140,7 +140,7 @@ describe TicTacToeBoard do
         board_3x3.set_space(3, "o")
         board_3x3.set_space(6, "o")
 
-        expect(board_3x3.game_has_winner?).to eq(true)
+        expect(board_3x3.winner).to eq("o")
       end  
 
       it "returns false when there are not 3 identical tokens in a row" do
@@ -148,7 +148,7 @@ describe TicTacToeBoard do
         board_3x3.set_space(3, "x")
         board_3x3.set_space(6, "o")
 
-        expect(board_3x3.game_has_winner?).to eq(false)
+        expect(board_3x3.winner).to eq(nil)
       end  
 
       it "returns true when there are 3 identical tokens in a diagonal" do
@@ -156,7 +156,7 @@ describe TicTacToeBoard do
         board_3x3.set_space(4, "x")
         board_3x3.set_space(8, "x")
 
-        expect(board_3x3.game_has_winner?).to eq(true)
+        expect(board_3x3.winner).to eq("x")
       end  
 
       it "returns false when there are not 3 identical tokens in a diagonal" do
@@ -164,7 +164,7 @@ describe TicTacToeBoard do
         board_3x3.set_space(4, "x")
         board_3x3.set_space(8, "x")
 
-        expect(board_3x3.game_has_winner?).to eq(false)
+        expect(board_3x3.winner).to eq(nil)
       end  
     end
 
