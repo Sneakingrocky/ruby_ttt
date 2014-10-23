@@ -50,5 +50,5 @@ class TicTacToeBoard < Board
 
   def game_is_over?
     winner || game_is_a_draw?
-  end   
+  end 
 end

@@ -6,7 +6,7 @@ describe TicTacToeBoard do
 
 
   describe "create TicTacToe Board" do
-    
+
     describe "rows and columns" do
       
       it "creates rows and columns for a 3x3 board" do
@@ -68,6 +68,9 @@ describe TicTacToeBoard do
         expect(board_4x4.columns).to eq(expected_output_columns)
       end
     end
+  end
+  
+  describe "Combinations on the board" do
 
     describe "left_diagonal" do
       it "returns the spaces in the left diagonal" do
@@ -116,8 +119,11 @@ describe TicTacToeBoard do
         expect(board_4x4.right_diagonal).to eq(expected_output)
       end
     end
+  end
   
-   describe "winner" do
+  describe "Game States" do
+  
+    describe "winner" do
 
       it "returns true when there are 3 identical tokens in a row" do
         board_3x3.set_space(0, "x")
