@@ -4,5 +4,9 @@ class TicTacToeUi
     puts msg
   end
 
+  def get_input
+    gets.chomp
+  end  
+
 
 end  
