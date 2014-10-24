@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+$LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
+require 'board'
+require 'game_loop'
+require 'tic_tac_toe_board'
+require 'tic_tac_toe_ui'
+require 'human_player'
+require 'presenter'
+
+ui = TicTacToeUi.new
+ttt_board = TicTacToeBoard.new(3)
+player1 = HumanPlayer.new("Player 1", "X", ui)
+player2 = HumanPlayer.new("Player 2", "O", ui)
+game = GameLoop.new(ttt_board, player1, player2, ui) 
+
+game.play_game
+
+ 
+
+

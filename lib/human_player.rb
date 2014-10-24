@@ -1,5 +1,5 @@
 class HumanPlayer
-  attr_reader :name
+  attr_reader :name, :assigned_token
 
   def initialize(name, assigned_token, ui)
     @name = name
