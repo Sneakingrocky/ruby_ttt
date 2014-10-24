@@ -30,14 +30,16 @@ class Presenter < SimpleDelegator
     "\n" + make_dashes + "\n"
   end 
 
-  def display_board
-    a = (0..number_of_spaces-1).map {|index| cell_display_value(index) }
-
-    a.each_slice(width).map {|row| display_row(row)}.join(display_dashes)
+  def space_display_values
+    (0..number_of_spaces-1).map {|index| space_display_value(index) }
   end
 
-  def cell_display_value(cell_number)
-    get_space(cell_number) || cell_number.to_s
+  def display_board
+    space_display_values.each_slice(width).map {|row| display_row(row)}.join(display_dashes)
+  end
+
+  def space_display_value(space_number)
+    get_space(space_number) || space_number.to_s
   end  
 
 end 
