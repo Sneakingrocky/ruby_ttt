@@ -1,10 +1,11 @@
 class GameLoop
 
-  def initialize(ttt_board, player1, player2, ui) 
+  def initialize(ttt_board, player1, player2, ui, presenter) 
     @ttt_board = ttt_board
     @player1 = player1
     @player2 = player2
     @ui = ui
+    @presenter = presenter
   end
 
   def play_game
@@ -16,7 +17,7 @@ class GameLoop
       play_turn(@player2)
       break if @ttt_board.game_is_over?
     end
-    @ui.display(presenter.display_board)
+    @ui.display(@presenter.display_board)
     @ui.display("Game over!")  
   end
 
@@ -37,13 +38,9 @@ class GameLoop
   end
 
   def play_turn(player)
-    @ui.display(presenter.display_board)
+    @ui.display(@presenter.display_board)
     move = player.get_move
     @ttt_board.set_space(move, player.assigned_token)
   end
-
-  def presenter
-    Presenter.new(@ttt_board)
-  end  
 
 end 

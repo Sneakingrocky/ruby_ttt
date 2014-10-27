@@ -11,7 +11,8 @@ ui = TicTacToeUi.new
 ttt_board = TicTacToeBoard.new(3)
 player1 = HumanPlayer.new("Player 1", "X", ui)
 player2 = HumanPlayer.new("Player 2", "O", ui)
-game = GameLoop.new(ttt_board, player1, player2, ui) 
+presenter = Presenter.new(ttt_board)
+game = GameLoop.new(ttt_board, player1, player2, ui, presenter) 
 
 game.play_game
 
