@@ -57,4 +57,15 @@ describe Board do
     end
   end
 
+  describe "available_spaces" do
+    it "returns all the spaces for an empty board" do
+      expect(board.available_spaces).to eq([0,1,2,3,4,5,6,7,8])
+    end
+
+    it "doesn't return spaces that are taken" do
+      board.set_space(2, "x")
+      board.set_space(5, "o")
+      expect(board.available_spaces).to eq([0,1,3,4,6,7,8])
+    end
+  end
 end

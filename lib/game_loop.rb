@@ -39,7 +39,7 @@ class GameLoop
 
   def play_turn(player)
     @ui.display(@presenter.display_board)
-    move = player.get_move
+    move = player.get_move(@ttt_board)
     @ttt_board.set_space(move, player.assigned_token)
   end
 

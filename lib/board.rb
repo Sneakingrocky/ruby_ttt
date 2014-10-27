@@ -41,5 +41,11 @@ class Board
     space >= number_of_spaces
   end  
 
+  def available_spaces
+    (0..number_of_spaces-1).select do |space|
+      !space_taken?(space)
+    end
+  end
+
 end
 
