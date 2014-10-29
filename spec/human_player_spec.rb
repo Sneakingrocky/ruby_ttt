@@ -1,7 +1,4 @@
-require 'player'
-require 'tic_tac_toe_board'
-require 'human_player'
-require 'tic_tac_toe_ui'
+require 'spec_helper'
 
 describe "Human Player" do
   let(:ui) { TicTacToeUi.new }

@@ -1,5 +1,4 @@
-require 'tic_tac_toe_board'
-require 'presenter'
+require 'spec_helper'
 
 describe Presenter do
   let (:presenter_3x3) { Presenter.new(board_3x3)}

@@ -1,5 +1,3 @@
-require 'board'
-
 class TicTacToeBoard < Board
  
   def rows

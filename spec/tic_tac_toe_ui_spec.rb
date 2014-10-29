@@ -1,5 +1,4 @@
-require 'tic_tac_toe_ui'
-require 'tic_tac_toe_board'
+require 'spec_helper'
 
 describe TicTacToeUi do
   let (:board_3x3) { TicTacToeBoard.new(3) }
