@@ -47,7 +47,7 @@ Tic | Tac | Toe
 
 <li>cd into the directory</li>
 <code>
-$ cd Mastermind
+$ cd ruby_ttt
 $ ruby bin/ruby_ttt_game #insert "game option here"</code>
 </li>
 </ol>
