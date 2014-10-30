@@ -1,4 +1,6 @@
 class TicTacToeBoard < Board
+  X_TOKEN = "X"
+  O_TOKEN = "O"
  
   def rows
     @spaces.each_slice(width).to_a

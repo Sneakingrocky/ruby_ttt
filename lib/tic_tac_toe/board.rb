@@ -33,6 +33,10 @@ class Board
     @spaces[space]
   end
 
+  def reset_space(space)
+    @spaces[space] = nil
+  end
+
   def space_taken?(space)
     get_space(space) != nil
   end
@@ -45,6 +49,10 @@ class Board
     (0..number_of_spaces-1).select do |space|
       !space_taken?(space)
     end
+  end
+
+  def empty?
+    @spaces.all? { |s| s.nil? }
   end
 
 end

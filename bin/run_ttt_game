@@ -5,14 +5,16 @@ require 'tic_tac_toe'
 
 ui = TicTacToeUi.new
 ttt_board = TicTacToeBoard.new(3)
-player1 = HumanPlayer.new("Player 1", "X", ui)
+player1 = HumanPlayer.new("Player 1", TicTacToeBoard::X_TOKEN, ui)
 if ARGV[0] == "computer"
-  player2 = ComputerPlayer.new("Player 2", "O", ui)
+  player2 = ComputerPlayer.new("Player 2", TicTacToeBoard::O_TOKEN, ui)
+elsif ARGV[0] == "smartypants"
+  player2 = SmartComputerPlayer.new("Player 2", TicTacToeBoard::O_TOKEN, ui)
 else
-  player2 = HumanPlayer.new("Player 2", "O", ui)
+  player2 = HumanPlayer.new("Player 2", TicTacToeBoard::O_TOKEN, ui)
 end
 presenter = Presenter.new(ttt_board)
-game = GameLoop.new(ttt_board, player1, player2, ui, presenter) 
+game = GameLoop.new(ttt_board, player2, player1, ui, presenter) 
 
 ARGV.clear
 
