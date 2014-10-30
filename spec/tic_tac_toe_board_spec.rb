@@ -189,5 +189,52 @@ describe TicTacToeBoard do
         expect(board_3x3.game_is_a_draw?).to eq(true)
       end
     end
+  
+    describe "game_is_over?" do
+      it "returns true when all the spaces are filled on the board" do
+        board_3x3.set_space(0, "x")
+        board_3x3.set_space(1, "x")
+        board_3x3.set_space(2, "o")
+        board_3x3.set_space(3, "o")
+        board_3x3.set_space(4, "o")
+        board_3x3.set_space(5, "x")
+        board_3x3.set_space(6, "x")
+        board_3x3.set_space(7, "o")
+        board_3x3.set_space(8, "x")
+
+        expect(board_3x3.game_is_over?).to eq(true) 
+      end
+
+      it "returns true when there is a winner" do
+        board_3x3.set_space(0, "x")
+        board_3x3.set_space(1, "o")
+        board_3x3.set_space(3, "o")
+        board_3x3.set_space(4, "x")
+        board_3x3.set_space(8, "x")
+
+        expect(board_3x3.game_is_over?).to eq(true)
+      end 
+    
+      it "returns true when there is no winner and all spaces are filled on the board" do
+        board_3x3.set_space(0, "x")
+        board_3x3.set_space(1, "x")
+        board_3x3.set_space(2, "o")
+        board_3x3.set_space(3, "o")
+        board_3x3.set_space(4, "o")
+        board_3x3.set_space(5, "x")
+        board_3x3.set_space(6, "x")
+        board_3x3.set_space(7, "o")
+        board_3x3.set_space(8, "x")
+
+        expect(board_3x3.game_is_over?).to eq(true)
+      end
+
+      it "returns false all the spaces are not filled" do
+        board_3x3.set_space(0, "x")
+        board_3x3.set_space(1, "o")
+
+        expect(board_3x3.game_is_over?).to eq(false)
+      end 
+    end
   end
 end  
