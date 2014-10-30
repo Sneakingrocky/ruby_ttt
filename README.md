@@ -12,15 +12,15 @@ Some have even said that “Love is a game of tic-tac-toe, constantly waiting fo
 
 <h3>Example of a win:</h3>
 
-<code>
+<p>
   O  | O  | X
 ---------------
   X  | O  | 5
 ---------------
   6  | X  | O
-  
+
 O Wins, Game over!
-</code>
+</p>
 
 
 <h2>How do I choose a space on the board</h2>
@@ -32,14 +32,14 @@ O Wins, Game over!
 
 <code>Type: 2</code>
 
-<code>
+<p>
   0  | 1  | 2 
 ---------------
   3  | 4  | 5
 ---------------
   6  | 7  | 8
 
-</code>
+</p>
 
 
 <h2>How to install the game</h2>
@@ -54,6 +54,8 @@ $ cd Mastermind
 $ ruby bin/ruby_ttt_game #insert "game option here"</code>
 </li>
 </ol>
+
+<h2>Game Options</h2>
 
 <ol class="Game Options">
 <li>Human vs Human</li>
