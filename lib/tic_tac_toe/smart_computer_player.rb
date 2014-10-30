@@ -1,6 +1,8 @@
 class SmartComputerPlayer < Player
   def get_move(board)
-    return 0 if board.empty?
+    available_moves = board.available_spaces
+
+    return available_moves.sample if board.empty?
     minimax(board, assigned_token)[:move]
   end
 

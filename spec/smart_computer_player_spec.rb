@@ -37,13 +37,5 @@ describe SmartComputerPlayer do
 
       expect(move).to eq(2)
     end
-
-    it "looks ahead! smarty pants" do
-      board.set_space 4, TicTacToeBoard::O_TOKEN
-
-      move = player.get_move(board)
-
-      expect(move).to eq(2)
-    end
   end
 end
