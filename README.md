@@ -10,14 +10,15 @@ Some have even said that “Love is a game of tic-tac-toe, constantly waiting fo
 <p>The player who succeeds in placing three respective marks in a horizontal, vertical, or diagonal row wins the game.</p>
 
 
-<h3>Example of a win:</h3>
+<p>Example of a win:</p>
 
+
+O | O | O
+--- | --- | ---
+X | O | X
+6 | X | 8
 <p>
-  O  | O  | X
----------------
-  X  | O  | 5
----------------
-  6  | X  | O
+
 
 O Wins, Game over!
 </p>
@@ -28,19 +29,15 @@ O Wins, Game over!
 <p>Simply type the number of the space you wish to choose into the command line when it is your turn. If you choose a spot that is not available you will see this error: "Space is not available. Please choose a different space."</p>
 
 
-<h3>Example: You want to choose the top right corner: </h3>
+<p>Example: You want to choose the top right corner: </p>
 
 <code>Type: 2</code>
 
-<p>
-  0  | 1  | 2 
----------------
-  3  | 4  | 5
----------------
-  6  | 7  | 8
-
-</p>
-
+Tic | Tac | Toe
+--- | --- | ---
+0 | 1 | 2
+3 | 4 | 5
+6 | 7 | 8
 
 <h2>How to install the game</h2>
 
