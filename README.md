@@ -24,7 +24,7 @@ O Wins, Game over!
 </p>
 
 
-<h2>How do I choose a space on the board</h2>
+<h2>How do I choose a space on the board?</h2>
 
 <p>Simply type the number of the space you wish to choose into the command line when it is your turn. If you choose a spot that is not available you will see this error: "Space is not available. Please choose a different space."</p>
 
@@ -39,7 +39,7 @@ Tic | Tac | Toe
 3 | 4 | 5
 6 | 7 | 8
 
-<h2>How to install the game</h2>
+<h2>How to install the game?</h2>
 
 <ol class="directions">
 <li>clone the repository</li>
@@ -52,7 +52,7 @@ $ ruby bin/ruby_ttt_game #insert "game option here"</code>
 </li>
 </ol>
 
-<h2>Game Options</h2>
+<h2>Game Options:</h2>
 
 <ol class="Game Options">
 <li>Human vs Human</li>
