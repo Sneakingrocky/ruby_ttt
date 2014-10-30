@@ -43,7 +43,7 @@ Tic | Tac | Toe
 
 <ol class="directions">
 <li>clone the repository</li>
-<code>$ git clone git@github.com:sneakingrocky/Mastermind.git</code>
+<code>$ git clone https://github.com/Sneakingrocky/ruby_ttt.git</code>
 
 <li>cd into the directory</li>
 <code>
