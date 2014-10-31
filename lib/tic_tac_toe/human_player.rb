@@ -13,11 +13,11 @@ class HumanPlayer < Player
   end
 
   def ask_for_move
-    @ui.display("#{name}, what is your next move?")
+    @ui.ask_for_move_text(name)
   end  
 
   def display_move_error
-    @ui.display("Space is not available. Please choose a different space.")
+    @ui.invalid_space_error_text
   end
 
   def valid_move?(move, board)

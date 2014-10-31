@@ -18,27 +18,16 @@ class GameLoop
       break if @ttt_board.game_is_over?
     end
     @ui.display(@presenter.display_board)
-    @ui.display("Game over!")  
+    @ui.game_over_text  
   end
 
   def game_rules
-    @ui.display("Welcome to Tic Tac Toe! 
-      
-      Here is how you play: 
-
-      Player 1 = X
-      Player 2 = O
-
-      You will take turns choosing the section number of the grid 
-      that you wish to place your assigned letter. The first player to
-      succeed in placing three respective marks in a horizontal, vertical, 
-      or diagonal row wins the game.
-
-    ")
+    @ui.game_rules_text
   end
 
   def play_turn(player)
     @ui.display(@presenter.display_board)
+    @ui.make_white_space
     move = player.get_move(@ttt_board)
     @ttt_board.set_space(move, player.assigned_token)
   end
