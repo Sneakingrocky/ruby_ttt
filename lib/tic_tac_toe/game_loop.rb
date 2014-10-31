@@ -18,7 +18,7 @@ class GameLoop
       break if @ttt_board.game_is_over?
     end
     @ui.display(@presenter.display_board)
-    @ui.game_over_text  
+    @ui.game_over_text(@ttt_board.winner)  
   end
 
   def game_rules

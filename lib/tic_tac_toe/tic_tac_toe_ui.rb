@@ -24,8 +24,8 @@ class TicTacToeUi
     ")
   end
   
-  def game_over_text
-    display("Game over!")
+  def game_over_text(name)
+    display("Game over! #{name} is the best")
   end
   
   def make_white_space
